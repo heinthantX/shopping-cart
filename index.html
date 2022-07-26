@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./config.js"></script>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body class="lg:h-screen bg-[#DADCDF] flex justify-center items-center">
+    <section class="bg-white flex flex-col lg:flex-row w-[1200px] max-w-[95%]">
+      <div class="p-6 lg:px-16 py-12 lg:w-[72%]">
+        <div class="flex justify-between">
+          <h1 class="text-xl lg:text-3xl font-bold">Shopping Cart</h1>
+          <span class="lg:text-2xl font-bold">3 Items</span>
+        </div>
+        <hr class="bg-gray-500 h-[1.2px] my-6" />
+        <div class="flex w-full pb-6 text-xs font-bold text-gray-500">
+          <h3 class="flex-[1.5] md:flex-[3]">PRODUCT DETAILS</h3>
+          <h3 class="flex-1 text-center">QUANTITY</h3>
+          <h3 class="flex-1 text-center">PRICE</h3>
+          <h3 class="flex-1 text-center hidden md:block">TOTAL</h3>
+        </div>
+        <ul class="space-y-8">
+          <li class="flex text-center text-sm lg:text-base">
+            <div
+              class="flex flex-[1.5] md:flex-[3] text-left items-center space-x-2 md:space-x-5"
+            >
+              <img
+                class="w-12 h-12 lg:w-24 lg:h-24"
+                src="./src/images/download.jpg"
+                alt=""
+              />
+              <div class="flex flex-col justify-between h-full p-1">
+                <h4 class="font-medium">Fifa 19</h4>
+                <span class="text-red-600">PS4</span>
+                <span class="text-gray-500">Remove</span>
+              </div>
+            </div>
+            <div class="flex-1 space-x-1">
+              <span class="text-2xl cursor-pointer">-</span>
+              <span class="border-2 border-gray-300 px-3">2</span>
+              <span class="text-2xl cursor-pointer">+</span>
+            </div>
+            <div class="flex-1 hidden md:block">£44.00</div>
+            <div class="flex-1">£88.00</div>
+          </li>
+          <li class="flex text-center text-sm lg:text-base">
+            <div
+              class="flex flex-[1.5] md:flex-[3] text-left items-center space-x-2 md:space-x-5"
+            >
+              <img
+                class="w-12 h-12 lg:w-24 lg:h-24"
+                src="./src/images/download (1).jpg"
+                alt=""
+              />
+              <div class="flex flex-col justify-between h-full p-1">
+                <h4 class="font-medium">Glacier White 500GB</h4>
+                <span class="text-red-600">PS4</span>
+                <span class="text-gray-500">Remove</span>
+              </div>
+            </div>
+            <div class="flex-1 space-x-1">
+              <span class="text-2xl cursor-pointer">-</span>
+              <span class="border-2 border-gray-300 px-3">1</span>
+              <span class="text-2xl cursor-pointer">+</span>
+            </div>
+            <div class="flex-1 hidden md:block">£249.99</div>
+            <div class="flex-1">£249.99</div>
+          </li>
+          <li class="flex text-center text-sm lg:text-base">
+            <div
+              class="flex flex-[1.5] md:flex-[3] text-left items-center space-x-2 md:space-x-5"
+            >
+              <img
+                class="w-12 h-12 lg:w-24 lg:h-24"
+                src="./src/images/platinum-headset-box-two-column-01-ps4-en-22may19.webp"
+                alt=""
+              />
+              <div class="flex flex-col justify-between h-full p-1">
+                <h4 class="font-medium">Platinum Headset</h4>
+                <span class="text-red-600">PS4</span>
+                <span class="text-gray-500">Remove</span>
+              </div>
+            </div>
+            <div class="flex-1 space-x-1">
+              <span class="text-2xl cursor-pointer">-</span>
+              <span class="border-2 border-gray-300 px-3">1</span>
+              <span class="text-2xl cursor-pointer">+</span>
+            </div>
+            <div class="flex-1 hidden md:block">£119.99</div>
+            <div class="flex-1">£119.99</div>
+          </li>
+        </ul>
+        <p class="text-blue-700 font-medium flex mt-12">
+          <img
+            class="mr-1"
+            src="./src/images/arrow-back-svgrepo-com.svg"
+            alt=""
+          />
+          Continue Shopping
+        </p>
+        <div class="w-full flex justify-center mt-3 md:hidden">
+          <img src="./src/images/icons8-double-down.gif" alt="" width="30px" />
+        </div>
+      </div>
+      <div
+        class="bg-[#F6F6F6] grow h-[600px] lg:h-auto py-12 px-6 flex flex-col justify-between"
+      >
+        <h2 class="text-3xl font-bold">Order Summary</h2>
+        <hr class="bg-gray-500 h-[1.2px]" />
+        <div class="flex justify-between">
+          <span>ITEMS 3</span>
+          <span>£475.98</span>
+        </div>
+        <div class="flex flex-col space-y-6">
+          <label for="shipping">SHIPPING</label>
+          <select name="" id="shipping" class="outline-none p-2">
+            <option value="">Standard Delivery - £5.00</option>
+          </select>
+        </div>
+        <form class="flex flex-col space-y-6">
+          <label for="promo">PROMO CODE</label>
+          <input
+            class="outline-none p-2"
+            type="text"
+            name=""
+            id="promo"
+            placeholder="Enter your code"
+          />
+          <button
+            class="bg-orange-600 text-orange-50 font-medium px-4 py-2 w-fit"
+          >
+            APPLY
+          </button>
+        </form>
+        <hr />
+        <div class="flex flex-col space-y-6">
+          <div class="flex justify-between">
+            <span>TOTAL COST</span>
+            <span>£462.98</span>
+          </div>
+          <button class="bg-blue-600 text-blue-50 py-2">CHECKOUT</button>
+        </div>
+      </div>
+    </section>
+    <script src="./index.js"></script>
+  </body>
+</html>
