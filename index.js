@@ -228,22 +228,12 @@ addProductBtn.addEventListener('click', (e) => {
     }
   });
   if (equalProductInShoppingCart.length > 0) {
-    shoppingCart.productList = shoppingCart.productList.map((v, i) => {
-      if (i === index) {
-        if (v.quantity < v.stockLimit) {
-          v.quantity += 1;
-        }
-        v.totalPrice = v.quantity * v.price;
-        return v;
-      } else {
-        return v;
-      }
-    });
+    increaseQuantity(index);
   } else {
     shoppingCart.productList.push(randomProduct);
+    renderProductList(shoppingCart.productList);
+    renderSummary(shoppingCart);
   }
-  renderProductList(shoppingCart.productList);
-  renderSummary(shoppingCart);
 });
 
 function renderProductItem(product, i) {
